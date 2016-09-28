@@ -1,0 +1,1 @@
+# Vraptor message handler
