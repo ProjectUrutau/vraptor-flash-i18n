@@ -2,6 +2,7 @@ package com.urutau.vraptor.handler.impl;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Event;
+import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +26,8 @@ public class DefaultScreened implements Screened {
 	public DefaultScreened() {
 		this(null, null);
 	}
-
+	
+	@Inject
 	public DefaultScreened(Redirector redirector, Event<String> eventMessage) {
 		this.redirector = redirector;
 		this.eventMessage = eventMessage;
@@ -37,8 +39,6 @@ public class DefaultScreened implements Screened {
 
 		// Translate message and put in validator
 		eventMessage.fire(message);
-		// By default, should stay in the current page
-		redirector.stayInCurrent();
 
 		return redirector;
 	}

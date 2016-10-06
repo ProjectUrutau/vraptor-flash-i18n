@@ -1,82 +1,40 @@
 package com.urutau.vraptor.handler.impl;
 
 import javax.enterprise.context.RequestScoped;
+import javax.enterprise.event.Event;
 import javax.inject.Inject;
 
-import com.urutau.vraptor.Category;
-import com.urutau.vraptor.i18n.I18nMessageCreator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import br.com.caelum.vraptor.Result;
+import com.urutau.vraptor.handler.MessageHandler;
+import com.urutau.vraptor.handler.Screened;
+import com.urutau.vraptor.handler.qualifier.Category;
 
 @RequestScoped
-public class DefaultMessageHandler {
-	private final Result result;
-	private final I18nMessageCreator i18n;
+public class DefaultMessageHandler implements MessageHandler {
 
-	private Category currentContext;
+	private static final Logger logger = LoggerFactory.getLogger(DefaultErrorMessageHandler.class);
+
+	private final Screened screened;
+	
+	@Category
+	private final Event<String> event;
 
 	public DefaultMessageHandler() {
 		this(null, null);
 	}
 
 	@Inject
-	public DefaultMessageHandler(Result result, I18nMessageCreator i18n) {
-		this.result = result;
-		this.i18n = i18n;
+	public DefaultMessageHandler(Screened screened, Event<String> event) {
+		this.screened = screened;
+		this.event = event;
 	}
 
-	/**
-	 * Mark a context to put a message
-	 *  
-	 * @param context some place into views
-	 * @return this Handler to calls {@link #show(String)} by chain method
-	 */
-	public DefaultMessageHandler use(Category context) {
-		this.currentContext = context;
-		return this;
-	}
-
-//	/**
-//	 * Shows a translated message into some {@link ContextPlace}
-//	 *  
-//	 * @param message reference to translate
-//	 */
-//	public DefaultMessageHandler show(String message) {
-//		String translatedMessage = i18n.translate(message).to(currentContext).getMessage();
-//		result.include(currentContext.toString(), translatedMessage);
-//		return this;
-//	}
-//
-//	/**
-//	 * Uses {@link Result#redirectingTo(Class)} and redirects to another action
-//	 * 
-//	 * @param controller contains action that will be called
-//	 * @return {@link br.com.caelum.vraptor.Controller} to calls some page
-//	 */
-//	public <Controller> Controller redirectTo(Class<Controller> controller) {
-//		return result.redirectTo(controller);
-//	}
-//
-//	/**
-//	 * Send a result in JSON format
-//	 */
-//	public void sendViaJSON(String message) {
-//		String translatedMessage = i18n.translate(message).to(currentContext).getMessage();
-//		result.use(Results.json()).withoutRoot().from(translatedMessage).serialize();
-//	}
-
-	/**
-	 * When catch an Exception return this interface to some treat
-	 *  
-	 * @param exception passed by other layer of architecture
-	 * @return this
-	 */
-	public DefaultMessageHandler whenCatch(Class<? extends Exception> exception) {
-		result.on(exception);
-		return this;
-	}
-
-	public boolean containsMessageOf(Category projectPanel) {
-		return result.included().containsKey(projectPanel.toString());
+	@Override
+	public Screened use(String category) {
+		logger.info("Select category " + category);
+		event.fire(category);
+		return screened;
 	}
 }
