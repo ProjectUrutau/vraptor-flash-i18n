@@ -1,4 +1,4 @@
-package com.urutau.vraptor.handler;
+package com.urutau.vraptor.handler.impl.error;
 
 import br.com.caelum.vraptor.validator.Validator;
 import br.com.caelum.vraptor.view.Results;

@@ -36,7 +36,7 @@ public class DefaultRedirector implements Redirector {
 	}
 
 	@Override
-	public void stayInCurrent() {
+	public void stay() {
 		logger.debug("Stay in same page");
 		result.use(Results.referer()).redirect();
 	}

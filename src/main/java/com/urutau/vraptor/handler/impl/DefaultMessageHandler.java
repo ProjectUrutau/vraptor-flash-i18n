@@ -14,7 +14,7 @@ import com.urutau.vraptor.handler.qualifier.Category;
 @RequestScoped
 public class DefaultMessageHandler implements MessageHandler {
 
-	private static final Logger logger = LoggerFactory.getLogger(DefaultErrorMessageHandler.class);
+	private static final Logger logger = LoggerFactory.getLogger(DefaultMessageHandler.class);
 
 	private final Screened screened;
 	private final Event<String> event;
@@ -31,7 +31,7 @@ public class DefaultMessageHandler implements MessageHandler {
 
 	@Override
 	public Screened use(String category) {
-		logger.info("Select category " + category);
+		logger.info("Category " + category + " was selected");
 		event.fire(category);
 		return screened;
 	}

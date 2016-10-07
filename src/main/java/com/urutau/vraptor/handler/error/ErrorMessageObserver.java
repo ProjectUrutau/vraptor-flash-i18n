@@ -1,4 +1,4 @@
-package com.urutau.vraptor.handler;
+package com.urutau.vraptor.handler.error;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Observes;

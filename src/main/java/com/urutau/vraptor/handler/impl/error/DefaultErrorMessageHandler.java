@@ -1,4 +1,4 @@
-package com.urutau.vraptor.handler.impl;
+package com.urutau.vraptor.handler.impl.error;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Event;
@@ -7,8 +7,8 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.urutau.vraptor.handler.ErrorMessageHandler;
-import com.urutau.vraptor.handler.Judge;
+import com.urutau.vraptor.handler.error.ErrorMessageHandler;
+import com.urutau.vraptor.handler.error.Judge;
 import com.urutau.vraptor.handler.qualifier.Category;
 
 import br.com.caelum.vraptor.validator.Validator;

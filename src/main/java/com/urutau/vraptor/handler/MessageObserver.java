@@ -7,7 +7,6 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.urutau.vraptor.handler.impl.DefaultErrorMessageHandler;
 import com.urutau.vraptor.handler.qualifier.Category;
 import com.urutau.vraptor.handler.qualifier.Message;
 import com.urutau.vraptor.i18n.I18nMessageCreator;
@@ -15,8 +14,8 @@ import com.urutau.vraptor.i18n.I18nMessageCreator;
 import br.com.caelum.vraptor.Result;
 
 /**
- * Chain sequence would be: use(category).when(condition).toShow(message)
- * .(redirectingTo(XptoController).hello()); // optional
+ * Chain sequence would be: use(category).toShow(message)
+ * .(redirectLogic); // optional
  */
 @RequestScoped
 public class MessageObserver {
@@ -44,7 +43,9 @@ public class MessageObserver {
 
 	public void setMessage(@Observes @Message String message) {
 		String translatedMessage = i18nCreator.translate(message).to(category).getMessage();
-		logger.info("Message translated is " + translatedMessage);
+
+		logger.debug("Message translated is " + translatedMessage);
+
 		result.include(category, translatedMessage);
 	}
 }

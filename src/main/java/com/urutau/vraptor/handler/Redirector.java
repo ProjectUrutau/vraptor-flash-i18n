@@ -13,9 +13,9 @@ public interface Redirector {
 	<Controller> Controller redirectingTo(Class<Controller> controller);
 
 	/**
-	 * Stay on the current page
+	 * Stay on the current page, this is the default behavior to POST and PUT methods 
 	 * 
 	 * @see {@link Results#referer()}
 	 */
-	void stayInCurrent();
+	void stay();
 }

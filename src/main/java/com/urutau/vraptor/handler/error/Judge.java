@@ -1,4 +1,6 @@
-package com.urutau.vraptor.handler;
+package com.urutau.vraptor.handler.error;
+
+import com.urutau.vraptor.handler.Screened;
 
 public interface Judge {
 	/**

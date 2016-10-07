@@ -1,11 +1,9 @@
-package com.urutau.vraptor.handler.impl;
+package com.urutau.vraptor.handler.impl.error;
 
 import javax.enterprise.context.RequestScoped;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.urutau.vraptor.handler.ErrorRedirector;
 
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.validator.Validator;
