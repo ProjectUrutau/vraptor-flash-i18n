@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.validator.Validator;
 import br.com.caelum.vraptor.view.Results;
+import br.com.urutau.vraptor.handler.error.ErrorRedirector;
 
 @RequestScoped
 public class DefaultErrorRedirector implements ErrorRedirector {

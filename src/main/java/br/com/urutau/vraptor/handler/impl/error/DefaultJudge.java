@@ -1,4 +1,4 @@
-package br.com.urutau.vraptor.handler.error;
+package br.com.urutau.vraptor.handler.impl.error;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Event;
@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import br.com.urutau.vraptor.handler.Screened;
+import br.com.urutau.vraptor.handler.error.Judge;
 import br.com.urutau.vraptor.handler.qualifier.Condition;
 
 @RequestScoped

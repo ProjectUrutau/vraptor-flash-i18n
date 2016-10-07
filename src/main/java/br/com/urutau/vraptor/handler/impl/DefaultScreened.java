@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import br.com.urutau.vraptor.handler.Redirector;
 import br.com.urutau.vraptor.handler.Screened;
-import br.com.urutau.vraptor.handler.error.DefaultJudge;
+import br.com.urutau.vraptor.handler.impl.error.DefaultJudge;
 import br.com.urutau.vraptor.handler.qualifier.Message;;
 
 @RequestScoped
