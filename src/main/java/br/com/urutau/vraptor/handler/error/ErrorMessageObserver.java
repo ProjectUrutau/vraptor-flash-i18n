@@ -1,16 +1,15 @@
-package com.urutau.vraptor.handler.error;
+package br.com.urutau.vraptor.handler.error;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 
-import com.urutau.vraptor.handler.qualifier.Category;
-import com.urutau.vraptor.handler.qualifier.Condition;
-import com.urutau.vraptor.handler.qualifier.Message;
-import com.urutau.vraptor.i18n.I18nMessageCreator;
-
 import br.com.caelum.vraptor.validator.I18nMessage;
 import br.com.caelum.vraptor.validator.Validator;
+import br.com.urutau.vraptor.handler.qualifier.Category;
+import br.com.urutau.vraptor.handler.qualifier.Condition;
+import br.com.urutau.vraptor.handler.qualifier.Message;
+import br.com.urutau.vraptor.i18n.I18nMessageCreator;
 
 /**
  * Chain sequence would be: use(category).when(condition).toShow(message)

@@ -1,4 +1,4 @@
-package com.urutau.vraptor.handler;
+package br.com.urutau.vraptor.handler;
 
 import br.com.caelum.vraptor.validator.Validator;
 import br.com.caelum.vraptor.view.Results;

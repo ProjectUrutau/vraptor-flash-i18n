@@ -1,8 +1,7 @@
-package com.urutau.vraptor.handler.error;
-
-import com.urutau.vraptor.Category;
+package br.com.urutau.vraptor.handler.error;
 
 import br.com.caelum.vraptor.validator.Validator;
+import br.com.urutau.vraptor.Category;
 
 public interface ErrorMessageHandler {
 

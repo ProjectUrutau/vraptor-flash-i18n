@@ -1,12 +1,11 @@
-package com.urutau.vraptor.i18n;
+package br.com.urutau.vraptor.i18n;
 
 import java.util.ResourceBundle;
 
 import javax.enterprise.context.Dependent;
 
-import com.urutau.vraptor.Category;
-
 import br.com.caelum.vraptor.validator.I18nMessage;
+import br.com.urutau.vraptor.Category;
 
 @Dependent
 public class I18nMessageCreator {

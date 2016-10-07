@@ -1,4 +1,4 @@
-package com.urutau.vraptor.handler.error;
+package br.com.urutau.vraptor.handler.error;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Event;
@@ -7,8 +7,8 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.urutau.vraptor.handler.Screened;
-import com.urutau.vraptor.handler.qualifier.Condition;
+import br.com.urutau.vraptor.handler.Screened;
+import br.com.urutau.vraptor.handler.qualifier.Condition;
 
 @RequestScoped
 public class DefaultJudge implements Judge {

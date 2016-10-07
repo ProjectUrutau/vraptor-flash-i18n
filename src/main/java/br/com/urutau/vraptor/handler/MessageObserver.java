@@ -1,4 +1,4 @@
-package com.urutau.vraptor.handler;
+package br.com.urutau.vraptor.handler;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Observes;
@@ -7,11 +7,10 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.urutau.vraptor.handler.qualifier.Category;
-import com.urutau.vraptor.handler.qualifier.Message;
-import com.urutau.vraptor.i18n.I18nMessageCreator;
-
 import br.com.caelum.vraptor.Result;
+import br.com.urutau.vraptor.handler.qualifier.Category;
+import br.com.urutau.vraptor.handler.qualifier.Message;
+import br.com.urutau.vraptor.i18n.I18nMessageCreator;
 
 /**
  * Chain sequence would be: use(category).toShow(message)

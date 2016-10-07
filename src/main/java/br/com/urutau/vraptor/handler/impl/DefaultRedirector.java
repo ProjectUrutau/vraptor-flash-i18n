@@ -1,4 +1,4 @@
-package com.urutau.vraptor.handler.impl;
+package br.com.urutau.vraptor.handler.impl;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -6,10 +6,9 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.urutau.vraptor.handler.Redirector;
-
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.view.Results;
+import br.com.urutau.vraptor.handler.Redirector;
 
 @RequestScoped
 public class DefaultRedirector implements Redirector {

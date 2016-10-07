@@ -1,4 +1,4 @@
-package com.urutau.vraptor;
+package br.com.urutau.vraptor;
 
 public enum Category {
 	DEFAULT,

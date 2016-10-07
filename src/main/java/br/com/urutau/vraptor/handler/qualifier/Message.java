@@ -1,4 +1,4 @@
-package com.urutau.vraptor.handler.qualifier;
+package br.com.urutau.vraptor.handler.qualifier;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
