@@ -35,16 +35,16 @@ public class ErrorMessageObserver {
 	private String category;
 	private boolean condition;
 
-	public void setCategory(@Observes @Category String category) {
-		this.category = category;
-	}
-
-	public void setCondition(@Observes @Condition Boolean condition) {
-		this.condition = condition;
-	}
-
-	public void setMessage(@Observes @Message String message) {
-		I18nMessage translatedMessage = i18nCreator.translate(message).to(category);
-		validator.addIf(condition, translatedMessage);
-	}
+//	public void setCategory(@Observes @Category String category) {
+//		this.category = category;
+//	}
+//
+//	public void setCondition(@Observes @Condition Boolean condition) {
+//		this.condition = condition;
+//	}
+//
+//	public void setMessage(@Observes @Message String message) {
+//		I18nMessage translatedMessage = i18nCreator.translate(message).to(category);
+//		validator.addIf(condition, translatedMessage);
+//	}
 }

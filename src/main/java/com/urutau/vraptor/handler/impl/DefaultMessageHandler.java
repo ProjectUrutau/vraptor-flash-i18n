@@ -17,8 +17,6 @@ public class DefaultMessageHandler implements MessageHandler {
 	private static final Logger logger = LoggerFactory.getLogger(DefaultErrorMessageHandler.class);
 
 	private final Screened screened;
-	
-	@Category
 	private final Event<String> event;
 
 	public DefaultMessageHandler() {
@@ -26,7 +24,7 @@ public class DefaultMessageHandler implements MessageHandler {
 	}
 
 	@Inject
-	public DefaultMessageHandler(Screened screened, Event<String> event) {
+	public DefaultMessageHandler(Screened screened, @Category Event<String> event) {
 		this.screened = screened;
 		this.event = event;
 	}
