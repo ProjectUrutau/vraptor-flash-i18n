@@ -1,6 +1,6 @@
 package br.com.urutau.vraptor.handler;
 
-public interface MessageHandler {
+public interface FlashMessage {
 	/**
 	 * Mark a context to put a message
 	 *  
