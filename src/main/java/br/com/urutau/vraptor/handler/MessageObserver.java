@@ -9,12 +9,13 @@ import org.slf4j.LoggerFactory;
 
 import br.com.caelum.vraptor.Result;
 import br.com.urutau.vraptor.handler.qualifier.Category;
+import br.com.urutau.vraptor.handler.qualifier.Condition;
 import br.com.urutau.vraptor.handler.qualifier.Message;
 import br.com.urutau.vraptor.i18n.I18nMessageCreator;
 
 /**
- * Chain sequence would be: use(category).toShow(message)
- * .(redirectLogic); // optional
+ * Chain sequence would be: use(category).toShow(message) .(redirectLogic); //
+ * optional
  */
 @RequestScoped
 public class MessageObserver {
@@ -24,6 +25,11 @@ public class MessageObserver {
 	private final I18nMessageCreator i18nCreator;
 	private final Result result;
 	private String category;
+	/**
+	 * {@link #setCondition(Boolean)} is not a mandatory method, so by default
+	 * all messages could be included.
+	 */
+	private boolean condition = true;
 
 	public MessageObserver() {
 		this(null, null);
@@ -33,6 +39,10 @@ public class MessageObserver {
 	public MessageObserver(I18nMessageCreator i18nCreator, Result result) {
 		this.i18nCreator = i18nCreator;
 		this.result = result;
+	}
+
+	public void setCondition(@Observes @Condition Boolean condition) {
+		this.condition = condition;
 	}
 
 	public void setCategory(@Observes @Category String category) {
@@ -45,6 +55,8 @@ public class MessageObserver {
 
 		logger.debug("Message translated is " + translatedMessage);
 
-		result.include(category, translatedMessage);
+		if (condition) {
+			result.include(category, translatedMessage);
+		}
 	}
 }

@@ -8,4 +8,11 @@ public interface FlashMessage {
 	 * @return this Handler to calls {@link #show(String)} by chain method
 	 */
 	public Screened use(String category);
+	
+	/**
+	 * Condition to shows the message
+	 * 
+	 * @param condition is to evaluate if message should be included
+	 */
+	public FlashMessage when(Boolean condition);
 }

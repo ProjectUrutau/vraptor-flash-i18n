@@ -14,15 +14,17 @@ import br.com.urutau.vraptor.handler.Screened;
 public class DefaultMessageHandlerTest {
 
 	private Screened screened;
-	private Event<String> event;
+	private Event<String> eventMessage;
+	private Event<Boolean> eventCondition;
 	private FlashMessage handler;
 	
 	@Before
 	@SuppressWarnings("unchecked")
 	public void setUp() {
 		screened = mock(Screened.class);
-		event = mock(Event.class);
-		handler = new DefaultFlash(screened, event);
+		eventMessage = mock(Event.class);
+		eventCondition = mock(Event.class);
+		handler = new DefaultFlash(screened, eventMessage, eventCondition);
 	}
 
 	@Test

@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import br.com.urutau.vraptor.handler.FlashMessage;
 import br.com.urutau.vraptor.handler.Screened;
 import br.com.urutau.vraptor.handler.qualifier.Category;
+import br.com.urutau.vraptor.handler.qualifier.Condition;
 
 @RequestScoped
 public class DefaultFlash implements FlashMessage {
@@ -17,22 +18,32 @@ public class DefaultFlash implements FlashMessage {
 	private static final Logger logger = LoggerFactory.getLogger(DefaultFlash.class);
 
 	private final Screened screened;
-	private final Event<String> event;
+	private final Event<String> eventMessage;
+	private final Event<Boolean> eventCondition;
 
 	public DefaultFlash() {
-		this(null, null);
+		this(null, null, null);
 	}
 
 	@Inject
-	public DefaultFlash(Screened screened, @Category Event<String> event) {
+	public DefaultFlash(Screened screened, @Category Event<String> eventMessage,
+			@Condition Event<Boolean> eventCondition) {
 		this.screened = screened;
-		this.event = event;
+		this.eventMessage = eventMessage;
+		this.eventCondition = eventCondition;
 	}
 
 	@Override
 	public Screened use(String category) {
 		logger.info("Category " + category + " was selected");
-		event.fire(category);
+		eventMessage.fire(category);
 		return screened;
+	}
+
+	@Override
+	public FlashMessage when(Boolean condition) {
+		logger.debug("Condition to show message has " + condition);
+		eventCondition.fire(condition);
+		return this;
 	}
 }

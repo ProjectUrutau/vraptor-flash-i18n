@@ -9,12 +9,11 @@ import org.slf4j.LoggerFactory;
 
 import br.com.urutau.vraptor.handler.Redirector;
 import br.com.urutau.vraptor.handler.Screened;
-import br.com.urutau.vraptor.handler.impl.error.DefaultJudge;
 import br.com.urutau.vraptor.handler.qualifier.Message;;
 
 @RequestScoped
 public class DefaultScreened implements Screened {
-	private static final Logger logger = LoggerFactory.getLogger(DefaultJudge.class);
+	private static final Logger logger = LoggerFactory.getLogger(DefaultScreened.class);
 
 	private final Redirector redirector;
 	private final Event<String> eventMessage;
