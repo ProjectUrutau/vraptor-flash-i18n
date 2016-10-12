@@ -35,6 +35,6 @@ vraptor_awesome = Vraptor is awesome!
 
 Veja também:
 
-http://www.vraptor.org/pt/docs/guia-de-10-minutos/#arquivo-de-mensagens
+http://www.vraptor.org/pt/docs/guia-de-10-minutos/#arquivo-de-mensagens<br/>
 http://blog.caelum.com.br/i18n-internacionalizacao-com-jstl/
 
