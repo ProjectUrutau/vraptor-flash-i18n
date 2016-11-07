@@ -11,6 +11,8 @@ public interface Redirector {
 	 * @return {@link br.com.caelum.vraptor.Controller} to calls some action
 	 */
 	<Controller> Controller redirectingTo(Class<Controller> controller);
+	
+	void sendJSON();
 
 	/**
 	 * Stay on the current page, this is the default behavior to POST and PUT methods 

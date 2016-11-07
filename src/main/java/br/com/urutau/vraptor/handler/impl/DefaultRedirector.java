@@ -35,6 +35,11 @@ public class DefaultRedirector implements Redirector {
 	}
 
 	@Override
+	public void sendJSON() {
+		result.use(Results.json()).withoutRoot().from(result.included()).serialize();
+	}
+
+	@Override
 	public void stay() {
 		logger.debug("Stay in same page");
 		result.use(Results.referer()).redirect();
