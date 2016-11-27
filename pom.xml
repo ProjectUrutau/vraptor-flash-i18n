@@ -6,12 +6,18 @@
 	<version>0.01</version>
 	<packaging>jar</packaging>
 	<name>vraptor-flash-i18n</name>
-	<url>http://maven.apache.org</url>
+	<url>https://github.com/ProjectUrutau/vraptor-flash-i18n</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<weld.version>2.1.2.Final</weld.version>
 	</properties>
+
+	<scm>
+		<url>https://github.com/ProjectUrutau/vraptor-flash-i18n</url>
+		<connection>scm:git:git://github.com/ProjectUrutau/vraptor-flash-i18n.git</connection>
+		<developerConnection>scm:git:git@github.com:ProjectUrutau/vraptor-flash-i18n.git</developerConnection>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -71,6 +77,42 @@
 	</dependencies>
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>downloads-maven-plugin</artifactId>
+				<version>0.6</version>
+				<configuration>
+					<description>Official ${project.name} build of the ${project.version} release</description>
+					<override>true</override>
+					<includeAttached>true</includeAttached>
+					<server>github</server>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>upload</goal>
+						</goals>
+						<phase>install</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.7</version>
+				<configuration>
+					<message>Building site for ${project.version}</message>
+					<server>github</server>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>site</phase>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
