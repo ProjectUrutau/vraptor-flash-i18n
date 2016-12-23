@@ -10,7 +10,7 @@ public interface Redirector {
 	 * @param controller contains action that will be called 
 	 * @return {@link br.com.caelum.vraptor.Controller} to calls some action
 	 */
-	<Controller> Controller redirectingTo(Class<Controller> controller);
+	<Controller> Controller redirectTo(Class<Controller> controller);
 	
 	void sendJSON();
 

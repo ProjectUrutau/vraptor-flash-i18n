@@ -10,7 +10,7 @@ public class MockRedirector implements Redirector {
 	private MockResult mockResult = new MockResult();
 
 	@Override
-	public <Controller> Controller redirectingTo(Class<Controller> controller) {
+	public <Controller> Controller redirectTo(Class<Controller> controller) {
 		return mockResult.redirectTo(controller);
 	}
 

@@ -22,7 +22,7 @@ public class DefaultRedirectorTest {
 
 	@Test
 	public void testRedirectingTo() {
-		assertNotNull(redirector.redirectingTo(Object.class));
+		assertNotNull(redirector.redirectTo(Object.class));
 	}
 	
 	@Test

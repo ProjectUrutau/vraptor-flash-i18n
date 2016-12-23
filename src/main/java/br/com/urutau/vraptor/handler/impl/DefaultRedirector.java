@@ -29,7 +29,7 @@ public class DefaultRedirector implements Redirector {
 	}
 
 	@Override
-	public <Controller> Controller redirectingTo(Class<Controller> controller) {
+	public <Controller> Controller redirectTo(Class<Controller> controller) {
 		logger.debug("redirecting...");
 		return result.redirectTo((controller));
 	}
