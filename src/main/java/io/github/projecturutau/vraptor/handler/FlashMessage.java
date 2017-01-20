@@ -1,4 +1,4 @@
-package br.com.urutau.vraptor.handler;
+package io.github.projecturutau.vraptor.handler;
 
 public interface FlashMessage {
 	/**

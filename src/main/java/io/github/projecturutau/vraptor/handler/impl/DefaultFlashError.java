@@ -1,11 +1,11 @@
-package br.com.urutau.vraptor.handler.impl;
+package io.github.projecturutau.vraptor.handler.impl;
 
 import javax.inject.Inject;
 
 import br.com.caelum.vraptor.validator.I18nMessage;
 import br.com.caelum.vraptor.validator.Validator;
-import br.com.urutau.vraptor.handler.FlashError;
-import br.com.urutau.vraptor.i18n.I18nMessageCreator;
+import io.github.projecturutau.vraptor.handler.FlashError;
+import io.github.projecturutau.vraptor.i18n.I18nMessageCreator;
 
 public class DefaultFlashError implements FlashError {
 

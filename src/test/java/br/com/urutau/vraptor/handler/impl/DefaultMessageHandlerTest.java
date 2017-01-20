@@ -6,10 +6,12 @@ import javax.enterprise.event.Event;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
 
-import br.com.urutau.vraptor.handler.FlashMessage;
-import br.com.urutau.vraptor.handler.Screened;
+import io.github.projecturutau.vraptor.handler.FlashMessage;
+import io.github.projecturutau.vraptor.handler.Screened;
+import io.github.projecturutau.vraptor.handler.impl.DefaultFlash;
+
+import static org.mockito.Mockito.*;
 
 public class DefaultMessageHandlerTest {
 

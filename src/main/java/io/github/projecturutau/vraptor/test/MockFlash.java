@@ -1,9 +1,9 @@
-package br.com.urutau.vraptor.test;
+package io.github.projecturutau.vraptor.test;
 
 import javax.enterprise.inject.Vetoed;
 
-import br.com.urutau.vraptor.handler.FlashMessage;
-import br.com.urutau.vraptor.handler.Screened;
+import io.github.projecturutau.vraptor.handler.FlashMessage;
+import io.github.projecturutau.vraptor.handler.Screened;
 
 @Vetoed
 public class MockFlash implements FlashMessage {

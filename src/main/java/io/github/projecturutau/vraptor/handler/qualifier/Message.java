@@ -1,4 +1,4 @@
-package br.com.urutau.vraptor.handler.qualifier;
+package io.github.projecturutau.vraptor.handler.qualifier;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -10,6 +10,6 @@ import javax.inject.Qualifier;
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.PARAMETER})
-public @interface Condition {
+public @interface Message {
 
 }

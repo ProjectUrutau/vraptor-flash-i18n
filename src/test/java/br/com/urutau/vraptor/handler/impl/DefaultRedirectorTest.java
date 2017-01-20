@@ -7,7 +7,8 @@ import org.junit.Test;
 
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.util.test.MockResult;
-import br.com.urutau.vraptor.handler.Redirector;
+import io.github.projecturutau.vraptor.handler.Redirector;
+import io.github.projecturutau.vraptor.handler.impl.DefaultRedirector;
 
 public class DefaultRedirectorTest {
 

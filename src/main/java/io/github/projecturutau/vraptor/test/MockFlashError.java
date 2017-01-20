@@ -1,10 +1,10 @@
-package br.com.urutau.vraptor.test;
+package io.github.projecturutau.vraptor.test;
 import javax.enterprise.inject.Vetoed;
 
 import br.com.caelum.vraptor.util.test.MockValidator;
 import br.com.caelum.vraptor.validator.SimpleMessage;
 import br.com.caelum.vraptor.validator.Validator;
-import br.com.urutau.vraptor.handler.FlashError;
+import io.github.projecturutau.vraptor.handler.FlashError;
 
 @Vetoed
 public class MockFlashError implements FlashError {

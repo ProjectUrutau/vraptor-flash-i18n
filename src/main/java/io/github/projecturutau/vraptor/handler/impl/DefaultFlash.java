@@ -1,4 +1,4 @@
-package br.com.urutau.vraptor.handler.impl;
+package io.github.projecturutau.vraptor.handler.impl;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Event;
@@ -7,10 +7,10 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import br.com.urutau.vraptor.handler.FlashMessage;
-import br.com.urutau.vraptor.handler.Screened;
-import br.com.urutau.vraptor.handler.qualifier.Category;
-import br.com.urutau.vraptor.handler.qualifier.Condition;
+import io.github.projecturutau.vraptor.handler.FlashMessage;
+import io.github.projecturutau.vraptor.handler.Screened;
+import io.github.projecturutau.vraptor.handler.qualifier.Category;
+import io.github.projecturutau.vraptor.handler.qualifier.Condition;
 
 @RequestScoped
 public class DefaultFlash implements FlashMessage {

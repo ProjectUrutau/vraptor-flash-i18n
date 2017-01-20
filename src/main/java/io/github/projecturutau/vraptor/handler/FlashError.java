@@ -1,4 +1,4 @@
-package br.com.urutau.vraptor.handler;
+package io.github.projecturutau.vraptor.handler;
 
 import br.com.caelum.vraptor.validator.I18nMessage;
 import br.com.caelum.vraptor.validator.Validator;

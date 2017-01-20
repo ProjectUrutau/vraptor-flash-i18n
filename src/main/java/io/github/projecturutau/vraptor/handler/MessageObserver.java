@@ -1,4 +1,4 @@
-package br.com.urutau.vraptor.handler;
+package io.github.projecturutau.vraptor.handler;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Observes;
@@ -8,10 +8,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import br.com.caelum.vraptor.Result;
-import br.com.urutau.vraptor.handler.qualifier.Category;
-import br.com.urutau.vraptor.handler.qualifier.Condition;
-import br.com.urutau.vraptor.handler.qualifier.Message;
-import br.com.urutau.vraptor.i18n.I18nMessageCreator;
+import io.github.projecturutau.vraptor.handler.qualifier.Category;
+import io.github.projecturutau.vraptor.handler.qualifier.Condition;
+import io.github.projecturutau.vraptor.handler.qualifier.Message;
+import io.github.projecturutau.vraptor.i18n.I18nMessageCreator;
 
 /**
  * Chain sequence would be: use(category).toShow(message) .(redirectLogic); //

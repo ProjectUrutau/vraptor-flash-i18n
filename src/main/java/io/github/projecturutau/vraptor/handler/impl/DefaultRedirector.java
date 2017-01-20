@@ -1,4 +1,4 @@
-package br.com.urutau.vraptor.handler.impl;
+package io.github.projecturutau.vraptor.handler.impl;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.view.Results;
-import br.com.urutau.vraptor.handler.Redirector;
+import io.github.projecturutau.vraptor.handler.Redirector;
 
 @RequestScoped
 public class DefaultRedirector implements Redirector {
@@ -36,7 +36,7 @@ public class DefaultRedirector implements Redirector {
 
 	@Override
 	public void sendJSON() {
-		result.use(Results.json()).withoutRoot().from(result.included()).serialize();
+		result.use(Results.json()).withoutRoot().from(result.included().values()).serialize();
 	}
 
 	@Override

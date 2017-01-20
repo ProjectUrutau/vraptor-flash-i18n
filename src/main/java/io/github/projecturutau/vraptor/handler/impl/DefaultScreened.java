@@ -1,4 +1,4 @@
-package br.com.urutau.vraptor.handler.impl;
+package io.github.projecturutau.vraptor.handler.impl;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Event;
@@ -7,9 +7,9 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import br.com.urutau.vraptor.handler.Redirector;
-import br.com.urutau.vraptor.handler.Screened;
-import br.com.urutau.vraptor.handler.qualifier.Message;;
+import io.github.projecturutau.vraptor.handler.Redirector;
+import io.github.projecturutau.vraptor.handler.Screened;
+import io.github.projecturutau.vraptor.handler.qualifier.Message;;
 
 @RequestScoped
 public class DefaultScreened implements Screened {

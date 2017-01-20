@@ -8,8 +8,9 @@ import javax.enterprise.event.Event;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.urutau.vraptor.handler.Redirector;
-import br.com.urutau.vraptor.handler.Screened;
+import io.github.projecturutau.vraptor.handler.Redirector;
+import io.github.projecturutau.vraptor.handler.Screened;
+import io.github.projecturutau.vraptor.handler.impl.DefaultScreened;
 
 public class DefaultScreenedTest {
 

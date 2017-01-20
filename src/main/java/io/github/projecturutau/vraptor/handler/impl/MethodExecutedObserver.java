@@ -1,4 +1,4 @@
-package br.com.urutau.vraptor.handler.impl;
+package io.github.projecturutau.vraptor.handler.impl;
 
 import static br.com.caelum.vraptor.controller.HttpMethod.POST;
 import static br.com.caelum.vraptor.controller.HttpMethod.PUT;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.controller.HttpMethod;
 import br.com.caelum.vraptor.events.MethodExecuted;
-import br.com.urutau.vraptor.handler.Redirector;
+import io.github.projecturutau.vraptor.handler.Redirector;
 
 public class MethodExecutedObserver {
 
