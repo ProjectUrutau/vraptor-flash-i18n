@@ -31,6 +31,10 @@ public class DefaultFlashError implements FlashError {
 
 	@Override
 	public Validator add(String message) {
+		if(category.equals(null)) {
+			throw new NullPointerException("One category needs to "
+					+ "be informed before you pass any error");
+		}
 		I18nMessage i18nMessage = i18nCreator.translate(message).to(category);
 		validator.add(i18nMessage);
 		return validator;
