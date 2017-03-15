@@ -11,13 +11,17 @@ The common way to add a message(without translate) into vraptor is:
 There is some ways to translate this. Basically what this pluggin makes is facilitate within standardized way of internationalize your messages, throught the method chain we could use just:
 
 ```java 
-  flash.use("message").toShow("vraptor_awesome").redirectingTo(this).method();
+  flash.use("success").toShow("vraptor_awesome").redirectTo(this).method();
 ```
 
-You could use a conditional method to evaluates if a message should be showed up:
+You could use the Validator object too, using flashError object like:
 
 ```java 
-  flash.when(true).use("message").toShow("vraptor_awesome").redirectingTo(this).method();
+  // "error" is one category
+  flashError.validate("error");
+  // Bellow we can put many errors
+  flashError.add("vraptor_awesome").onErrorRedirectTo(this).method();
+  ...
 ```
 
 ## Configure your i18n
@@ -33,7 +37,18 @@ Each with the logic:
 vraptor_awesome = Vraptor is awesome!
 ``` 
 
-Veja também:
+### Install
+
+Add into your pom.xml:
+```xml 
+		<dependency>
+			<groupId>io.github.projecturutau</groupId>
+			<artifactId>vraptor-flash-i18n</artifactId>
+			<version>0.01</version>
+		</dependency>
+```
+
+<i>Veja também:</i>
 
 http://www.vraptor.org/pt/docs/guia-de-10-minutos/#arquivo-de-mensagens<br/>
 http://blog.caelum.com.br/i18n-internacionalizacao-com-jstl/
