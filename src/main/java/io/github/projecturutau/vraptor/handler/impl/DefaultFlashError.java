@@ -31,7 +31,7 @@ public class DefaultFlashError implements FlashError {
 
 	@Override
 	public Validator add(String message) {
-		if(category.equals(null)) {
+		if(category == null) {
 			throw new NullPointerException("One category needs to "
 					+ "be informed before you pass any error");
 		}
