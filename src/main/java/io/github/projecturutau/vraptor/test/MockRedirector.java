@@ -7,8 +7,17 @@ import io.github.projecturutau.vraptor.handler.Redirector;
 
 @Vetoed
 public class MockRedirector implements Redirector {
-	private MockResult mockResult = new MockResult();
+	private final MockResult mockResult;
 
+	public MockRedirector(MockResult mockResult, String key, String message) {
+		this.mockResult = mockResult;
+		mockResult.include(key, message);
+	}
+
+	/*
+	 * Whatever with this effect
+	 */
+	
 	@Override
 	public <Controller> Controller redirectTo(Class<Controller> controller) {
 		return mockResult.redirectTo(controller);
