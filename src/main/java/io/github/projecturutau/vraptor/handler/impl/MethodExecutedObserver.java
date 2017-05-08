@@ -33,7 +33,7 @@ public class MethodExecutedObserver {
 	 * When method has been executed if result has not been decided, 
 	 * should be call {@link Redirector#stay()}
 	 * 
-	 * @param method
+	 * @param method Vraptor gives the method listened in this observer
 	 */
 	public void stay(@Observes MethodExecuted method) {
 		// Stay in same page

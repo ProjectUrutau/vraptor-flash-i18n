@@ -16,8 +16,8 @@ public class I18nMessageCreator {
 	private String message;
 
 	/**
-	 * Creates a new message internationalized. See {@link I18nMessage} and
-	 * {@link Message}
+	 * Creates a new message internationalized. @see br.com.caelum.vraptor.validator.I18nMessage and
+	 * @see br.com.caelum.vraptor.validator.Message
 	 * 
 	 * @param category
 	 *            of message

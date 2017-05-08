@@ -13,7 +13,7 @@ public interface FlashError {
 	 * Put a message into {@link Validator#getErrors()}
 	 * 
 	 * @param message to be translated
-	 * @return 
+	 * @return {@link Validator}
 	 */
 	public Validator add(String message);
 	

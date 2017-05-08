@@ -4,7 +4,7 @@
 
 	<groupId>io.github.projecturutau</groupId>
 	<artifactId>vraptor-flash-i18n</artifactId>
-	<version>0.01</version>
+	<version>0.01-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>vraptor-flash-i18n</name>
 	<url>https://github.com/ProjectUrutau/vraptor-flash-i18n</url>
